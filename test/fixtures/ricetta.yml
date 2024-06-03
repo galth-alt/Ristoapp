@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  descrizione: MyText
+  rails: MyString
+  generate: MyString
+  model: MyString
+  IngredienteRicetta: MyString
+  ricetta: one
+  ingrediente: one
+  quantita: 1
+
+two:
+  nome: MyString
+  descrizione: MyText
+  rails: MyString
+  generate: MyString
+  model: MyString
+  IngredienteRicetta: MyString
+  ricetta: two
+  ingrediente: two
+  quantita: 1

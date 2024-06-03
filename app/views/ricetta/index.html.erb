@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ricetta</h1>
+
+<div id="ricetta">
+  <% @ricetta.each do |ricettum| %>
+    <%= render ricettum %>
+    <p>
+      <%= link_to "Show this ricettum", ricettum %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ricettum", new_ricettum_path %>

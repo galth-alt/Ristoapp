@@ -1,0 +1,29 @@
+<h1>New ordine</h1>
+
+<%= render "form", ordine: @ordine %>
+<%= form_with(model: @ordine, local: true) do |form| %>
+  <div>
+    <%= form.label :cliente_id %>
+    <%= form.collection_select :cliente_id, @clienti, :id, :nome %>
+  </div>
+
+  <h3>Ricette</h3>
+  <% @ricettas.each do |ricetta| %>
+    <div>
+      <%= check_box_tag "ricetta_ids[]", ricetta.id %>
+      <%= label_tag "ricetta_ids_#{ricetta.id}", ricetta.nome %>
+      <%= number_field_tag "quantita[#{ricetta.id}]", 1, min: 1 %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<br>
+
+<div>
+  <%= link_to "Back to ordines", ordines_path %>
+</div>

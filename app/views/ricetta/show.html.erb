@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ricettum %>
+
+<div>
+  <%= link_to "Edit this ricettum", edit_ricettum_path(@ricettum) %> |
+  <%= link_to "Back to ricetta", ricetta_path %>
+
+  <%= button_to "Destroy this ricettum", @ricettum, method: :delete %>
+</div>

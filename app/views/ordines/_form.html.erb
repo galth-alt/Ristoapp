@@ -1,0 +1,57 @@
+<%= form_with(model: ordine) do |form| %>
+  <% if ordine.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ordine.errors.count, "error") %> prohibited this ordine from being saved:</h2>
+
+      <ul>
+        <% ordine.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :cliente_id, style: "display: block" %>
+    <%= form.text_field :cliente_id %>
+  </div>
+
+  <div>
+    <%= form.label :rails, style: "display: block" %>
+    <%= form.text_field :rails %>
+  </div>
+
+  <div>
+    <%= form.label :generate, style: "display: block" %>
+    <%= form.text_field :generate %>
+  </div>
+
+  <div>
+    <%= form.label :model, style: "display: block" %>
+    <%= form.text_field :model %>
+  </div>
+
+  <div>
+    <%= form.label :RicettaOrdine, style: "display: block" %>
+    <%= form.text_field :RicettaOrdine %>
+  </div>
+
+  <div>
+    <%= form.label :ordine_id, style: "display: block" %>
+    <%= form.text_field :ordine_id %>
+  </div>
+
+  <div>
+    <%= form.label :ricetta_id, style: "display: block" %>
+    <%= form.text_field :ricetta_id %>
+  </div>
+
+  <div>
+    <%= form.label :quantita, style: "display: block" %>
+    <%= form.number_field :quantita %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

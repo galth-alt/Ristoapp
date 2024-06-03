@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente: one
+  rails: MyString
+  generate: MyString
+  model: MyString
+  RicettaOrdine: MyString
+  ordine: one
+  ricetta: one
+  quantita: 1
+
+two:
+  cliente: two
+  rails: MyString
+  generate: MyString
+  model: MyString
+  RicettaOrdine: MyString
+  ordine: two
+  ricetta: two
+  quantita: 1
